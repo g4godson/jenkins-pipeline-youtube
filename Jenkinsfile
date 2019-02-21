@@ -2,7 +2,8 @@ pipeline {
     agent any
     
     tools   {
-        jdk 'Java 8'
+        maven "Maven"
+        jdk "Java 8"
     }
 
     stages {
@@ -10,7 +11,7 @@ pipeline {
 
             steps {
                 
-                    sh 'mvn clean compile'
+                    sh "mvn clean"
                 
             }
         }
@@ -19,7 +20,7 @@ pipeline {
 
             steps {
                 
-                    sh 'mvn test'
+                    sh "mvn test"
                 
             }
         }

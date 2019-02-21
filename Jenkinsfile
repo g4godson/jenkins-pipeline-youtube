@@ -23,6 +23,14 @@ pipeline {
                     bat "mvn test"
                 
             }
+            
+            post{
+                success{
+                    echo 'Now Archiving ....'
+
+                    archiveArtifacts artifacts : '**/*.war'
+                }
+            }
         }
 
 

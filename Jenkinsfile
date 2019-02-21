@@ -11,7 +11,7 @@ pipeline {
 
             steps {
                 
-                    sh "mvn clean"
+                    bat "mvn clean"
                 
             }
         }
@@ -20,7 +20,7 @@ pipeline {
 
             steps {
                 
-                    sh "mvn test"
+                    bat "mvn test"
                 
             }
         }
